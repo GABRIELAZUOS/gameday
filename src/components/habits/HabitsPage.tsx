@@ -167,7 +167,7 @@ export function HabitsPage() {
         <table className="w-full text-xs border-collapse">
           <thead>
             <tr className="border-b border-border">
-              <th className="text-left px-4 py-3 font-semibold text-text-muted min-w-[160px] sticky left-0 bg-card z-10">
+              <th className="text-left px-4 py-3 font-semibold text-text-muted min-w-[140px] sticky left-0 z-10" style={{ backgroundColor: '#1a1a2e' }}>
                 Hábito
               </th>
               {daysArray.map((d) => {
@@ -201,7 +201,7 @@ export function HabitsPage() {
                   className={`border-b border-border/40 last:border-0 ${rowIdx % 2 === 0 ? '' : 'bg-surface/30'}`}
                 >
                   {/* Habit name — inline edit */}
-                  <td className="px-4 py-2 sticky left-0 bg-inherit z-10" style={{ backgroundColor: rowIdx % 2 === 0 ? '#16213e' : '#16213ecc' }}>
+                  <td className="px-4 py-2 sticky left-0 z-10" style={{ backgroundColor: rowIdx % 2 === 0 ? '#16213e' : '#131228' }}>
                     {editingHabitId === habit.id ? (
                       <input
                         className="input py-1 text-xs w-full"

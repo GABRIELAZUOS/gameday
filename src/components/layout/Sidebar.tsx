@@ -29,7 +29,7 @@ export function Sidebar() {
   const setActivePlayer = useAppStore((s) => s.setActivePlayer)
 
   return (
-    <aside className="w-60 shrink-0 bg-surface border-r border-border flex flex-col h-screen sticky top-0">
+    <aside className="w-60 shrink-0 bg-surface border-r border-border hidden md:flex flex-col h-screen sticky top-0">
       {/* Logo */}
       <div className="p-5 border-b border-border">
         <div className="flex items-center gap-2">

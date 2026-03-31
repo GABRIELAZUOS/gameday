@@ -13,7 +13,8 @@
       "mcp__Claude_Preview__preview_start",
       "Bash(pkill -f \"vite\")",
       "Bash(node resize-icon.js)",
-      "Bash(\"C:/Program Files/nodejs/node.exe\" resize-icon.js)"
+      "Bash(\"C:/Program Files/nodejs/node.exe\" resize-icon.js)",
+      "Bash(\"C:/Program Files/nodejs/node.exe\" ./node_modules/typescript/bin/tsc --noEmit)"
     ]
   }
 }
