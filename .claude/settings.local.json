@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(cmd.exe /c \"where node && where npm && where npx\")",
+      "Bash(cmd.exe /c \"where node\")",
+      "Bash(cmd.exe /c \"where npm\")",
+      "Bash(export PATH=\"$PATH:/c/Program Files/nodejs:/c/Users/Windows/AppData/Roaming/npm\")",
+      "Bash(npm --version)",
+      "Bash(echo EXIT:$?)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(pkill -f \"vite\")"
+    ]
+  }
+}
