@@ -29,13 +29,6 @@
   }
 }
 
-/* ── Mobile layout ── */
-@media (max-width: 767px) {
-  aside.sidebar {
-    display: none !important;
-    width: 0 !important;
-  }
-}
 
 @layer components {
   .btn {
