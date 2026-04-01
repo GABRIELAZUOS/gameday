@@ -9,6 +9,7 @@ import {
   LogOut,
   Zap,
   Bike,
+  X,
 } from 'lucide-react'
 import { useAppStore, useActivePlayer } from '../../store/useAppStore'
 import { Avatar } from '../shared/Avatar'
@@ -26,20 +27,30 @@ const nav = [
 
 interface SidebarContentProps {
   onClose: () => void
+  showClose?: boolean
 }
 
-export function SidebarContent({ onClose }: SidebarContentProps) {
+export function SidebarContent({ onClose, showClose = false }: SidebarContentProps) {
   const player = useActivePlayer()
   const setActivePlayer = useAppStore((s) => s.setActivePlayer)
 
   return (
     <>
-      {/* Logo */}
-      <div className="p-5 border-b border-border shrink-0">
+      {/* Logo + close button */}
+      <div className="p-5 border-b border-border shrink-0 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Zap className="w-6 h-6 text-accent" />
           <span className="text-xl font-black text-text">GameDay</span>
         </div>
+        {showClose && (
+          <button
+            onClick={onClose}
+            aria-label="Fechar menu"
+            className="p-1.5 rounded-lg text-text-muted hover:text-text hover:bg-card transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        )}
       </div>
 
       {/* Player mini-card */}

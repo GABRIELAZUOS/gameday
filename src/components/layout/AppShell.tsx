@@ -32,7 +32,7 @@ export function AppShell() {
           />
           {/* Drawer panel */}
           <aside className="fixed left-0 top-0 z-50 h-full w-72 flex flex-col bg-surface border-r border-border shadow-2xl">
-            <SidebarContent onClose={close} />
+            <SidebarContent onClose={close} showClose />
           </aside>
         </>
       )}
