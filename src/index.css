@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Responsive layout — written in plain CSS to avoid Tailwind JIT issues ── */
+
+/* Mobile (< 768px): hide desktop sidebar, show mobile header */
+.md-sidebar   { display: none !important; }
+.mobile-header { display: flex !important; }
+
+/* Desktop (≥ 768px): show desktop sidebar, hide mobile header */
+@media (min-width: 768px) {
+  .md-sidebar    { display: flex !important; }
+  .mobile-header { display: none !important; }
+}
+
 @layer base {
   body {
     @apply bg-bg text-text font-sans;

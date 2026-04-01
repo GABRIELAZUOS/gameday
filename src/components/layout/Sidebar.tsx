@@ -24,28 +24,16 @@ const nav = [
   { to: '/leaderboard', icon: Trophy, label: 'Ranking' },
 ]
 
-interface SidebarProps {
-  isOpen: boolean
+interface SidebarContentProps {
   onClose: () => void
 }
 
-export function Sidebar({ isOpen, onClose }: SidebarProps) {
+export function SidebarContent({ onClose }: SidebarContentProps) {
   const player = useActivePlayer()
   const setActivePlayer = useAppStore((s) => s.setActivePlayer)
 
   return (
-    <aside
-      className={[
-        // Base — mobile drawer (fixed, slides in from left)
-        'flex flex-col bg-surface border-r border-border',
-        'fixed left-0 top-0 h-full z-50 w-72',
-        'transition-transform duration-300 ease-in-out',
-        // Desktop — back in document flow as sticky sidebar
-        'md:sticky md:top-0 md:h-screen md:w-60 md:z-auto md:translate-x-0',
-        // Mobile open/closed state
-        isOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full',
-      ].join(' ')}
-    >
+    <>
       {/* Logo */}
       <div className="p-5 border-b border-border shrink-0">
         <div className="flex items-center gap-2">
@@ -101,6 +89,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           Trocar Jogador
         </button>
       </div>
-    </aside>
+    </>
   )
 }
